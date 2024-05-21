@@ -22,6 +22,10 @@ pipeline {
                 sh 'docker run -d --name nginx -p 82:80 test:v1'
             }
         }
-        
+      stage('docker images') {
+            steps {
+                sh 'docker images'
+            }
+        }  
     }
 }
